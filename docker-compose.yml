@@ -1,0 +1,14 @@
+services:
+  welcomeapp:
+    container_name: welcome-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    networks:
+      - welcomeapp
+
+networks:
+  welcomeapp:
+    driver: bridge
